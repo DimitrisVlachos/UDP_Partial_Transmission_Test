@@ -11,9 +11,9 @@ HEADER:
 	
 command b0 : Request file
 
-	b1..b2 : Filename length
+	b1..b2 : Filename length (255 max)
 	
-	b2..filename length : filename to request (MAX 255 characters)
+	b2..filename length : filename to request (MAX 255 characters / No unicode support for this demo)
 
 command b1 : TRANSMIT
 
