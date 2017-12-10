@@ -6,15 +6,23 @@
 	Header of each packet :
 
 	b0   : Command : 0 : Download request + Filename , 1 : Transmit requested file
+	
 command b0 : Request file
+
 	b1..b2 : Filename length
+	
 	b2..filename length : filename to request (MAX 255 characters)
 
 command b1 : TRANSMIT
+
 	b1...9 : uint64_t : packet number (to be sorted later) (NOTE : 0xffffffffffffffff indicates FINAL BLOCK!)
+	
 	b9..17 : uint64_t : size of data associated with this packet
+	
 	b17..25 : uint64_t : crc32 of data
+	
 	b25.. size of packet : data...
+
 
 
 2.Block size is fixed to 4KB (including header data).
