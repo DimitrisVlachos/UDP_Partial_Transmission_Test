@@ -15,7 +15,7 @@ command b0 : Request file
 
 command b1 : TRANSMIT
 
-	b1...9 : uint64_t : packet number (to be sorted later) (NOTE : 0xffffffffffffffff indicates FINAL BLOCK!)
+	b1...9 : uint64_t : packet number (to be sorted later) (NOTE : 2^64-1 indicates FINAL BLOCK!)
 	
 	b9..17 : uint64_t : size of data associated with this packet
 	
