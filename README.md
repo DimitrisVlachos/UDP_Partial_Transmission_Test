@@ -1,5 +1,5 @@
-#UDP partial block transmission.
-
+**UDP partial block transmission.
+**
 The protocol in detail :
 
 1. Client/Server communicate with a single fixed-size block size
@@ -23,7 +23,9 @@ command b1 : TRANSMIT
 
 4.Once all blocks are transmitted , the client sorts blocks based on index and merges them to a single file.
 
-Improvements that can be applied :
+
+**Improvements that can be applied :
+
 -Make management of incoming requests (assigned to same client) a separate process (Thread)
 and handle net i/o seperately for each request. Terminate connection on completion or timeout.
 
