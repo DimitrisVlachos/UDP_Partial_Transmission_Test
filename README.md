@@ -4,6 +4,7 @@
 
 1. Client/Server communicate with a single fixed-size  packet
 	  :
+	  
 HEADER:
 	b0   : Command : 0 : Download request + Filename , 1 : Transmit requested file
 	
