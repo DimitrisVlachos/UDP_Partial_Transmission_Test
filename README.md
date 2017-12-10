@@ -2,9 +2,9 @@
 
 **The protocol in detail :**
 
-1. Client/Server communicate with a single fixed-size block size
-	Header of each packet :
-
+1. Client/Server communicate with a single fixed-size  packet
+	  :
+HEADER:
 	b0   : Command : 0 : Download request + Filename , 1 : Transmit requested file
 	
 command b0 : Request file
