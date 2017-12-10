@@ -40,9 +40,13 @@ and handle net i/o seperately for each request. Terminate connection on completi
 -Allow variable-length block packets by expanding the header to support extra commands.
 Example , on initial connection attempt , let the server decide which is the most optimal
 block size for the requested file based on the following criteria :
+
 	a.Limit Total server OUTGOING TRAFFIC load (If traffic load exceeds a certain amount , limit block sizes globally)
+	
 	b.In addition to [a] , pause outgoing packets temporarily
+	
 	c.Implement priority quee by implementing client accounting system.Registered clients with higher priority badge
 	get more bandwidth
+
 
 -Block compression
