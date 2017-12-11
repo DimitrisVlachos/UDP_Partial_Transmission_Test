@@ -7,7 +7,7 @@
 	  
 HEADER:
 
-	b0   : Command : 0 : Download request + Filename , 1 : Transmit requested file
+	b0   : Command 
 	
 command 0x00 : Request file
 
