@@ -49,7 +49,7 @@ block size for the requested file.
 	
 	b.In addition to [a] , pause outgoing packets temporarily
 	
-	c.Implement priority quee by implementing client accounting system.Registered clients with higher priority badge
+	c.Implement priority queue by implementing client accounting system.Registered clients with higher priority badge
 	get more bandwidth
 
 
