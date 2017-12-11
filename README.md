@@ -9,25 +9,31 @@ HEADER:
 
 	b0   : Command : 0 : Download request + Filename , 1 : Transmit requested file
 	
-command b0 : Request file
+command 0x00 : Request file
 
 	b1..b2 : Filename length (255 max)
 	
 	b2..filename length : filename to request (MAX 255 characters / No Utf-16/32 support for this demo)
 
-command b1 : TRANSMIT
+command 0x01 : TRANSMIT
 
 	b1...9 : uint64_t : packet number (to be sorted later) (NOTE : 2^64-1 indicates FINAL BLOCK!)
 	
 	b9..17 : uint64_t : size of data associated with this packet
 	
-	b17..25 : uint64_t : crc32 of data
+	b17..21 : uint32_t : crc32 of data
 	
-	b25.. size of packet : data...
+	b21.. size of packet : data...
 
+command 0x02 : PACKET NOT RECEIVED (client)
 
+	b1...9 : uint64_t : packet number (to be sorted later) (NOTE : 2^64-1 indicates FINAL BLOCK!)
 
-2.Block size is fixed to 4KB (including header data).
+command 0x03 : PACKET RECEIVED (client)
+
+	b1...9 : uint64_t : packet number (to be sorted later) (NOTE : 2^64-1 indicates FINAL BLOCK!)
+	
+2.Block size is fixed to 4KB (including header data). (Can be changed at compile time)
 
 3.Blocks are stored temporarily to a separate directory in client's download history directory
 
