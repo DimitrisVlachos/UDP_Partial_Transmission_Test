@@ -35,6 +35,8 @@ command 0x03 : PACKET RECEIVED (client)
 	
 2.Block size is fixed to 4KB (including header data). (Can be changed at compile time)
 
+	2.a : Client -> Server responses are fixed to 255+1+1 bytes
+	
 3.Blocks are stored temporarily to a separate directory in client's download history directory
 
 4.Once all blocks are transmitted , the client sorts blocks based on index and merges them to a single file.
