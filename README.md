@@ -55,4 +55,6 @@ block size for the requested file.
 
 -Block compression
 
+-Block encryption
+
 -Utf-16/32 filename support
