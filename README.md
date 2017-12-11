@@ -66,3 +66,7 @@ block size for the requested file.
 -Block encryption
 
 -Utf-16/32 filename support
+
+-Pause/Resume transmission
+
+
