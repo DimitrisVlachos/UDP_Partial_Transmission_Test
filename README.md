@@ -41,7 +41,9 @@ and handle net i/o seperately for each request. Terminate connection on completi
 
 -Allow variable-length block packets by expanding the header to support extra commands.
 Example , on initial connection attempt , let the server decide which is the most optimal
-block size for the requested file based on the following criteria :
+block size for the requested file.
+
+-Network usage optimization:
 
 	a.Limit Total server OUTGOING TRAFFIC load (If traffic load exceeds a certain amount , limit block sizes globally)
 	
